@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ulutashus.XUtils.Portable
+namespace Ulutashus.Xamarin.XUtils.Portable
 {
     public class XamlSafeDictionary<K, V> : XamlSafeList<V>
     {

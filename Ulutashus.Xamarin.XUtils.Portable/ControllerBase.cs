@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
-namespace Ulutashus.XUtils.Portable
+namespace Ulutashus.Xamarin.XUtils.Portable
 {
     public class ControllerBase : ObservableDictionary
     {

@@ -5,11 +5,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using Ulutashus.XUtils.Portable;
-using Ulutashus.XUtils.Portable.Contracts;
-using Ulutashus.XUtils.Portable.Helpers;
+using Ulutashus.Xamarin.XUtils.Portable;
+using Ulutashus.Xamarin.XUtils.Portable.Contracts;
+using Ulutashus.Xamarin.XUtils.Portable.Helpers;
 
-namespace Ulutashus.XUtils.Android
+namespace Ulutashus.Xamarin.XUtils.Android
 {
     public class ActivityView<T> : Activity, IView<T> where T : ControllerBase, new()
     {

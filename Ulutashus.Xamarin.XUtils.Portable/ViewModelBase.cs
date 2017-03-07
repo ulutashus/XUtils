@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Ulutashus.XUtils.Portable
+namespace Ulutashus.Xamarin.XUtils.Portable
 {
     public class ViewModelBase : ObservableDictionary
     {

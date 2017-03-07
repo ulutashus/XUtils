@@ -8,8 +8,8 @@
     <ProjectGuid>{57E690CE-C3E9-4C17-9893-8E1B341C8009}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ulutashus.XUtils.Portable</RootNamespace>
-    <AssemblyName>Ulutashus.XUtils.Portable</AssemblyName>
+    <RootNamespace>Ulutashus.Xamarin.XUtils.Portable</RootNamespace>
+    <AssemblyName>Ulutashus.Xamarin.XUtils.Portable</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

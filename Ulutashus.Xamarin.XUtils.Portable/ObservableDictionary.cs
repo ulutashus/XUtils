@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace Ulutashus.XUtils.Portable
+namespace Ulutashus.Xamarin.XUtils.Portable
 {
     public class ObservableDictionary : ObservableDictionary<object>
     {

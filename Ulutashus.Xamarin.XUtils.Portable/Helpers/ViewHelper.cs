@@ -5,9 +5,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using Ulutashus.XUtils.Portable.Contracts;
+using Ulutashus.Xamarin.XUtils.Portable.Contracts;
 
-namespace Ulutashus.XUtils.Portable.Helpers
+namespace Ulutashus.Xamarin.XUtils.Portable.Helpers
 {
     public class ViewHelper<T> where T : ControllerBase, new()
     {

@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ulutashus.XUtils.Portable.Contracts
+namespace Ulutashus.Xamarin.XUtils.Portable.Contracts
 {
     public interface IView<T> where T : ControllerBase
     {

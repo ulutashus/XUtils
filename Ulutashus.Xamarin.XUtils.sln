@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ulutashus.XUtils.Portable", "Ulutashus.XUtils.Portable\Ulutashus.XUtils.Portable.csproj", "{57E690CE-C3E9-4C17-9893-8E1B341C8009}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ulutashus.Xamarin.XUtils.Portable", "Ulutashus.Xamarin.XUtils.Portable\Ulutashus.Xamarin.XUtils.Portable.csproj", "{57E690CE-C3E9-4C17-9893-8E1B341C8009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ulutashus.XUtils.Android", "Ulutashus.XUtils.Android\Ulutashus.XUtils.Android.csproj", "{E35CE714-A4C4-476F-83EB-57B39EDE6D2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ulutashus.Xamarin.XUtils.Android", "Ulutashus.Xamarin.XUtils.Android\Ulutashus.Xamarin.XUtils.Android.csproj", "{E35CE714-A4C4-476F-83EB-57B39EDE6D2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
