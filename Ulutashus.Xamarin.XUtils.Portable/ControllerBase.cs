@@ -12,5 +12,15 @@ namespace Ulutashus.Xamarin.XUtils.Portable
         public ControllerBase()
         {
         }
+
+        public virtual void OnLoad()
+        {
+            // to override
+        }
+
+        public virtual void OnUnload()
+        {
+            // to override
+        }
     }
 }

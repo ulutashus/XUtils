@@ -20,19 +20,27 @@ namespace Ulutashus.Xamarin.XUtils.Portable.Helpers
                 throw new ArgumentNullException(nameof(view));
 
             _view = view;
-            _view.Controller = new T();
             _observersDict = new Dictionary<string, Action<object, object>>();
-            _view.Controller.PropertyChanged += OnControllerPropertyChanged;
         }
 
-        public void ObserveProperty<TController, TProperty>(
+        public void Init()
+        {
+            _view.Controller = new T();
+            _view.Controller.PropertyChanged += OnControllerPropertyChanged;
+            _view.InitializeBindings();
+        }
+
+        public void BindProperty<TController, TProperty>(
             Expression<Func<TController, TProperty>> property,
             PropertyChangedDeleage<TProperty> onChanged) where TController : ControllerBase
         {
             var propName = GetPropertyName(property);
             _observersDict[propName] = (oldValue, newValue) =>
             {
-                onChanged((TProperty)oldValue, (TProperty)newValue);
+                if(oldValue == null)
+                    onChanged(default(TProperty), (TProperty)newValue);
+                else
+                    onChanged((TProperty)oldValue, (TProperty)newValue);
             };
         }
 

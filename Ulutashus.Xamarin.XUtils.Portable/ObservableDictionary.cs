@@ -15,17 +15,25 @@ namespace Ulutashus.Xamarin.XUtils.Portable
     {
         private Dictionary<string, T> _dictionary = new Dictionary<string, T>();
 
-        public T2 Get<T2>([CallerMemberName] string propertyName = null) where T2 : T
+        protected T2 Get<T2>([CallerMemberName] string propertyName = null) where T2 : T
         {
             var value = propertyName != null ? this[propertyName] : null;
             return (value is T2) ? (T2)(object)value : default(T2);
         }
 
-        public void Set<T2>(T2 value, [CallerMemberName] string propertyName = null) where T2 : T
+        protected void Set<T2>(T2 value, [CallerMemberName] string propertyName = null) where T2 : T
         {
             if (propertyName != null)
             {
                 this[propertyName] = value;
+            }
+        }
+
+        public void NotifyAll()
+        {
+            foreach(var pair in _dictionary)
+            {
+                InvokeMapChanged(pair.Key, pair.Value, pair.Value);
             }
         }
 

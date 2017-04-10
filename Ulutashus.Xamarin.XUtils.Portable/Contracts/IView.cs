@@ -11,7 +11,9 @@ namespace Ulutashus.Xamarin.XUtils.Portable.Contracts
     {
         T Controller { get; set; }
 
-        void ObserveProperty<TProperty>(Expression<Func<T, TProperty>> property,
+        void InitializeBindings();
+
+        void BindProperty<TProperty>(Expression<Func<T, TProperty>> property,
             PropertyChangedDeleage<TProperty> onChanged);
     }
 

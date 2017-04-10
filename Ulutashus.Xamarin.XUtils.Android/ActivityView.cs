@@ -14,16 +14,41 @@ namespace Ulutashus.Xamarin.XUtils.Android
     public class ActivityView<T> : Activity, IView<T> where T : ControllerBase, new()
     {
         private readonly ViewHelper<T> _viewHelper;
+        private bool _isFirstStart = true;
 
         public ActivityView()
         {
             _viewHelper = new ViewHelper<T>(this);
+            _viewHelper.Init();
+
         }
 
-        public void ObserveProperty<TProperty>(Expression<Func<T, TProperty>> property,
-           PropertyChangedDeleage<TProperty> onChanged)
+        public virtual void InitializeBindings()
         {
-            _viewHelper.ObserveProperty(property, onChanged);
+            // To Override
+        }
+
+        public void BindProperty<TProperty>(Expression<Func<T, TProperty>> property, 
+            PropertyChangedDeleage<TProperty> onChanged)
+        {
+            _viewHelper.BindProperty(property, onChanged);
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            if(_isFirstStart)
+            {
+                _isFirstStart = false;
+                Controller.NotifyAll();
+            }
+            Controller.OnLoad();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            Controller.OnUnload();
         }
 
         #region Properties
